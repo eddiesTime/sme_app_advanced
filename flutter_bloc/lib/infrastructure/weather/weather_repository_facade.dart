@@ -22,7 +22,7 @@ class WeatherRepositoryFacade implements IWeatherFacade {
   Future<WeatherResponse> getWeatherForLocation(
       {@required String location}) async {
     final WeatherResponse _wr =
-        await _weatherRepository.getWeatherFor(city: location);
+        await _weatherRepository.getWeatherWithQuery(city: location);
     return _wr;
   }
 
@@ -30,7 +30,7 @@ class WeatherRepositoryFacade implements IWeatherFacade {
   Future<WeatherResponse> refreshWeatherData(
       {@required String location}) async {
     final WeatherResponse _wr =
-        await _weatherRepository.getWeatherFor(city: location);
+        await _weatherRepository.getWeatherWithQuery(city: location);
     return _wr;
   }
 }
