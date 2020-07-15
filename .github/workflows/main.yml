@@ -23,8 +23,8 @@ jobs:
           channel: 'dev'
       - name: Install Dependencies
         run: flutter pub get
-      - name: Run Analizer
-        run: flutter analyze
+      # - name: Run Analizer
+      #   run: flutter analyze
       - name: Run unit and widget test. Create coverage report
         run: flutter test --coverage test/main_test.dart
       - name: Install CLI package to remove files from coverage report easily
